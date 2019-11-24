@@ -1,9 +1,10 @@
 package com.ironelder.codelabdagger.registration
 
 import com.ironelder.codelabdagger.user.UserManager
+import javax.inject.Inject
 
 
-class RegistrationViewModel(val userManager: UserManager) {
+class RegistrationViewModel @Inject constructor(val userManager: UserManager) {
 
     private var username: String? = null
     private var password: String? = null
