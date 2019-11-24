@@ -2,11 +2,13 @@ package com.ironelder.codelabdagger.user
 
 import com.ironelder.codelabdagger.storage.Storage
 import javax.inject.Inject
+import javax.inject.Singleton
 
 
 private const val REGISTERED_USER = "ironelder"
 private const val PASSWORD_SUFFIX = "ironelder123$"
 
+@Singleton
 class UserManager @Inject constructor(private val storage: Storage) {
 
     var userDataRepository: UserDataRepository? = null

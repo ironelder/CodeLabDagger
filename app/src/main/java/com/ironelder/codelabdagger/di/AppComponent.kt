@@ -5,7 +5,9 @@ import com.ironelder.codelabdagger.main.MainActivity
 import com.ironelder.codelabdagger.registration.RegistrationActivity
 import dagger.BindsInstance
 import dagger.Component
+import javax.inject.Singleton
 
+@Singleton
 @Component(modules = [StorageModule::class])
 interface AppComponent {
     @Component.Factory
