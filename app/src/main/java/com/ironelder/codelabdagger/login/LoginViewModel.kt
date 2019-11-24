@@ -4,10 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.ironelder.codelabdagger.user.UserManager
 
-/**
- * LoginViewModel is the ViewModel that [LoginActivity] uses to
- * obtain information of what to show on the screen and handle complex logic.
- */
 class LoginViewModel(private val userManager: UserManager) {
 
     private val _loginState = MutableLiveData<LoginViewState>()

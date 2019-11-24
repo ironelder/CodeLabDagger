@@ -3,10 +3,6 @@ package com.ironelder.codelabdagger.registration
 import com.ironelder.codelabdagger.user.UserManager
 
 
-/**
- * RegistrationViewModel is the ViewModel that the Registration flow ([RegistrationActivity]
- * and fragments) uses to keep user's input data.
- */
 class RegistrationViewModel(val userManager: UserManager) {
 
     private var username: String? = null

@@ -5,10 +5,6 @@ import androidx.lifecycle.MutableLiveData
 
 private const val MAX_LENGTH = 5
 
-/**
- * EnterDetailsViewModel is the ViewModel that [EnterDetailsFragment] uses to
- * obtain to validate user's input data.
- */
 class EnterDetailsViewModel {
 
     private val _enterDetailsState = MutableLiveData<EnterDetailsViewState>()

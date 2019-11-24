@@ -3,10 +3,6 @@ package com.ironelder.codelabdagger.main
 import com.ironelder.codelabdagger.user.UserDataRepository
 
 
-/**
- * MainViewModel is the ViewModel that [MainActivity] uses to
- * obtain information of what to show on the screen.
- */
 class MainViewModel(private val userDataRepository: UserDataRepository) {
 
     val welcomeText: String

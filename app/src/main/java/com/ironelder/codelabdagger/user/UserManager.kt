@@ -6,17 +6,8 @@ import com.ironelder.codelabdagger.storage.Storage
 private const val REGISTERED_USER = "ironelder"
 private const val PASSWORD_SUFFIX = "ironelder123$"
 
-/**
- * Handles User lifecycle. Manages registrations, logs in and logs out.
- * Knows when the user is logged in.
- */
 class UserManager(private val storage: Storage) {
 
-    /**
-     *  UserDataRepository is specific to a logged in user. This determines if the user
-     *  is logged in or not, when the user logs in, a new instance will be created.
-     *  When the user logs out, this will be null.
-     */
     var userDataRepository: UserDataRepository? = null
 
     val username: String
