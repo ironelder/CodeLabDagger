@@ -2,8 +2,9 @@ package com.ironelder.codelabdagger.di
 
 import android.content.Context
 import com.ironelder.codelabdagger.login.LoginComponent
-import com.ironelder.codelabdagger.main.MainActivity
 import com.ironelder.codelabdagger.registration.RegistrationComponent
+import com.ironelder.codelabdagger.user.UserComponent
+import com.ironelder.codelabdagger.user.UserManager
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton
@@ -17,6 +18,6 @@ interface AppComponent {
     }
 
     fun registrationComponent(): RegistrationComponent.Factory
-    fun loginComponent():LoginComponent.Factory
-    fun inject(activity: MainActivity)
+    fun loginComponent(): LoginComponent.Factory
+    fun userManager(): UserManager
 }
