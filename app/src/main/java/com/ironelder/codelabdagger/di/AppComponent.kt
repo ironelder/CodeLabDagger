@@ -1,6 +1,7 @@
 package com.ironelder.codelabdagger.di
 
 import android.content.Context
+import com.ironelder.codelabdagger.login.LoginComponent
 import com.ironelder.codelabdagger.main.MainActivity
 import com.ironelder.codelabdagger.registration.RegistrationComponent
 import dagger.BindsInstance
@@ -16,5 +17,6 @@ interface AppComponent {
     }
 
     fun registrationComponent(): RegistrationComponent.Factory
+    fun loginComponent():LoginComponent.Factory
     fun inject(activity: MainActivity)
 }

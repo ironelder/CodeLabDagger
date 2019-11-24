@@ -1,12 +1,12 @@
 package com.ironelder.codelabdagger.login
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doOnTextChanged
 import androidx.lifecycle.Observer
 import com.ironelder.codelabdagger.MyApplication
@@ -20,11 +20,13 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var errorTextView: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        (application as MyApplication).appComponent.loginComponent().create().inject(this)
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
         // Creates ViewModel and listens for the loginState LiveData
-        loginViewModel = LoginViewModel((application as MyApplication).userManager)
         loginViewModel.loginState.observe(this, Observer<LoginViewState> { state ->
             when (state) {
                 is LoginSuccess -> {
