@@ -2,22 +2,19 @@ package com.ironelder.codelabdagger.di
 
 import android.content.Context
 import com.ironelder.codelabdagger.main.MainActivity
-import com.ironelder.codelabdagger.registration.RegistrationActivity
-import com.ironelder.codelabdagger.registration.enterdetails.EnterDetailsFragment
-import com.ironelder.codelabdagger.registration.termsandconditions.TermsAndConditionsFragment
+import com.ironelder.codelabdagger.registration.RegistrationComponent
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [StorageModule::class])
+@Component(modules = [StorageModule::class, AppSubComponents::class])
 interface AppComponent {
     @Component.Factory
     interface Factory {
         fun create(@BindsInstance context: Context): AppComponent
     }
+
+    fun registrationComponent(): RegistrationComponent.Factory
     fun inject(activity: MainActivity)
-    fun inject(activity: RegistrationActivity)
-    fun inject(fragment: TermsAndConditionsFragment)
-    fun inject(fragment: EnterDetailsFragment)
 }
