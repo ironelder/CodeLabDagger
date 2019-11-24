@@ -1,9 +1,10 @@
 package com.ironelder.codelabdagger.registration
 
+import com.ironelder.codelabdagger.di.ActivityScope
 import com.ironelder.codelabdagger.user.UserManager
 import javax.inject.Inject
 
-
+@ActivityScope
 class RegistrationViewModel @Inject constructor(val userManager: UserManager) {
 
     private var username: String? = null
